@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Currency</title>
+    <style>
+        /* General Reset */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /* Align vertically */
+            height: 100vh;
+            padding: 2rem;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Left Section (Image) */
+        .image-section {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            animation: slideUp 2s ease-out forwards;
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Right Section (Text at Center) */
+        .text-section {
+            flex: 1;
+            text-align: center;
+            /* Center the text content */
+        }
+
+        .text-section h1 {
+            font-size: 3rem;
+            margin: 0 0 1rem;
+        }
+
+        .text-section p {
+            font-size: 1.2rem;
+            margin: 0 0 2rem;
+            line-height: 1.5;
+        }
+
+        .btn {
+            background-color: #00bfff;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        /* Airplane Icon */
+        .airplane {
+            position: absolute;
+            font-size: 2rem;
+            color: #00bfff;
+            transition: transform 2s linear, top 2s linear, left 2s linear;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .image-section {
+                max-width: 300px;
+            }
+
+            .text-section {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .text-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .text-section p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                font-size: 0.9rem;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .airplane {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-section h1 {
+                font-size: 2rem;
+            }
+
+            .text-section p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                font-size: 0.8rem;
+                padding: 0.6rem 1.2rem;
+            }
+
+            .image-section {
+                max-width: 250px;
+            }
+
+            .airplane {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Section (Image) -->
+        <div class="image-section">
+            <img src="slider.png" alt="Phone Illustration" />
+            <div class="airplane">✈️</div>
+        </div>
+
+        <!-- Right Section (Text) -->
+        <div class="text-section">
+            <h1>Crypto Currency</h1>
+            <p>
+                Explore the world of crypto and digital currencies. A new way to exchange, invest, and manage wealth
+                with cutting-edge technology.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </div>
+
+    <script>
+        // Get the airplane element
+        const airplane = document.querySelector('.airplane');
+        const container = document.querySelector('.container');
+
+        // Function to move the airplane smoothly
+        function moveAirplane() {
+            const containerWidth = container.offsetWidth;
+            const containerHeight = container.offsetHeight;
+
+            // Generate random positions within the container
+            const randomX = Math.random() * (containerWidth - 50); // Avoid airplane going outside the right edge
+            const randomY = Math.random() * (containerHeight - 50); // Avoid airplane going outside the bottom edge
+
+            // Update the airplane's position smoothly
+            airplane.style.left = `${randomX}px`;
+            airplane.style.top = `${randomY}px`;
+        }
+
+        // Move the airplane every 2 seconds
+        setInterval(moveAirplane, 2000);
+    </script>
+</body>
+
+</html>

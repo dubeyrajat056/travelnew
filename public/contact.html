@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Services Template</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="boostrap/css/bootstrap.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./../css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <p class="text-body px-3">|</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-primary px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-primary pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="package.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="destination.html">Destination</a></li>
+                            <li><a class="dropdown-item" href="guide.html">Travel Guides</a></li>
+                            <li><a class="dropdown-item" href="testimonial.html">Testimonial</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <section class="about-section">
+        <div class="container">
+            <h3>Tours & Travel</h3>
+            <h1>Let's Discover The World Together</h1>
+            <!-- The form will only be visible on large screens (lg and above) -->
+            <form class="mt-4 w-75 mx-auto d-none d-lg-block">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-3"> <select class="form-select" aria-label="Destination">
+                            <option selected>Destination</option>
+                            <option value="1">Europe</option>
+                            <option value="2">Asia</option>
+                            <option value="3">Africa</option>
+                        </select> </div>
+                    <div class="col-lg-3 col-12 mb-3"> <input type="date" class="form-control"
+                            aria-label="Departure Date"> </div>
+                    <div class="col-lg-3 col-12 mb-3"> <input type="date" class="form-control" aria-label="Return Date">
+                    </div>
+                    <div class="col-lg-3 col-12 mb-3"> <input type="number" class="form-control"
+                            placeholder="Duration (days)"> </div>
+                    <div class="col-12"> <button class="btn btn-success w-55">Submit</button> </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Form Outside Hero Section for Small Screens -->
+    <!-- <div class="smallform"> -->
+    <section class="small-screen-form-section d-lg-none py-4">
+        <div class="form-container">
+            <h2>Plan Your Trip</h2>
+            <form>
+                <!-- Destination Dropdown -->
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination" required>
+                        <option value="" disabled selected>Select a Country</option>
+                        <option value="USA">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="France">France</option>
+                        <option value="France">India</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+
+                <!-- Going Date -->
+                <div class="form-group">
+                    <label for="going-date">Going Date</label>
+                    <input type="date" id="going-date" name="going-date" required>
+                </div>
+
+                <!-- Return Date -->
+                <div class="form-group">
+                    <label for="return-date">Return Date</label>
+                    <input type="date" id="return-date" name="return-date" required>
+                </div>
+
+                <!-- Total Days -->
+                <div class="form-group">
+                    <label for="total-days">Total Days</label>
+                    <input type="number" id="total-days" name="total-days" min="1" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Book Now</button>
+            </form>
+        </div>
+
+    </section>
+    <!-- </div> -->
+
+    <div class="container mt-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form id="contactForm" class="mt-4" method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <br><br>
+    <br><br>
+    <br><br>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Traveler provides top-notch travel and tour services worldwide.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="bi bi-envelope-fill"></i> info@traveler.com</p>
+                    <p><i class="bi bi-telephone-fill"></i> +123 456 7890</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>© 2024 Traveler. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script>
+
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                const response = await fetch('http://localhost:5000/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, phone, message })
+                });
+
+                if (response.ok) {
+                    alert('Your message has been sent!');
+                } else {
+                    alert('There was a problem sending your message.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred.');
+            }
+        });
+
+
+    </script>
+    <script src="boostrap/js/bootstrap.js"></script>
+    <script src="contact.js"></script>
+</body>
+
+</html>

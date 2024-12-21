@@ -1,0 +1,75 @@
+.about-us-section {
+    margin-top: 3rem;
+}
+
+.about-us-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.about-us-section p {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.about-us-section .badge {
+    font-size: 0.875rem;
+    background-color: #007bff;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.about-us-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-us-section ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: #6c757d;
+}
+
+.about-us-section ul li i {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-right: 0.5rem;
+}
+
+.about-us-section .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.about-us-section .btn:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.small-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.small-images img {
+    width: 45%;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
